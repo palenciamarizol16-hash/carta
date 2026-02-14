@@ -1,0 +1,103 @@
+<!-- 
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Carta Digital</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      text-align: center;
+      font-family: Georgia, serif;
+    }
+    #carta {
+      display: none;
+      margin-top: 20px;
+    }
+    img {
+      margin-top: 20px;
+      border: 2px solid white;
+    }
+    p {
+      width: 60%;
+      margin: auto;
+      text-align: justify;
+      line-height: 1.5;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .portada {
+      position: relative;
+      display: inline-block;
+    }
+    .portada button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: crimson;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    /* Ocultar el reproductor de música pero mantenerlo activo */
+    #musica {
+      width: 0;
+      height: 0;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bella Dama</h1>
+
+  <!-- Portada con imagen y botón en el centro -->
+  <div class="portada">
+    <img src="https://st2.depositphotos.com/1007566/43404/v/450/depositphotos_434049470-stock-illustration-envelope-mail-with-number-one.jpg" 
+         alt="Imagen de la carta" width="400">
+    <button onclick="abrirCarta()">Abrir Carta</button>
+  </div>
+
+  <!-- Contenido oculto -->
+  <div id="carta">
+    <p>
+      Dicen que hay seres que no pertenecen del todo a este mundo. usted es uno de ellos. 
+      No camina: flota entre los días como una melodía que se niega a morir. 
+      Su piel, de porcelana, parece esculpida por manos divinas. 
+      Sus ojos, zafiros que desafían la noche, revelan una mente brillante, inusual en tiempos donde el pensamiento se vende barato.
+      <br><br>
+      Los mortales la miran con deseo, pero también con temor. ¿Es usted un ángel disfrazado de mujer? 
+      ¿O el diablo mismo, encarnado en belleza para tentar al alma? Nadie lo sabe. 
+      Lo único cierto es que quien usted amé no necesitaría morir para conocer el cielo.
+      <br><br>
+      Pocas veces e escuchado su voz, pero cuando la e escuchado, su voz es como una sinfonía que ordena el caos. 
+      Su cuerpo, como las cordilleras, guardan secretos que sólo los dichosos pueden explorar. 
+      Y su presencia… su presencia es como una constelación: guía para los perdidos, misterio para los sabios, delirio para los poetas.
+    </p>
+    <!-- Música de fondo (oculta pero activa) -->
+    <iframe id="musica" 
+      src="https://www.youtube.com/embed/s_MexVOFApw?autoplay=1&loop=1&playlist=s_MexVOFApw">
+    </iframe>
+  </div>
+
+  <script>
+    function abrirCarta() {
+      document.getElementById("carta").style.display = "block";
+      document.querySelector(".portada").style.display = "none";
+    }
+  </script>
+</body>
+</html>
+
