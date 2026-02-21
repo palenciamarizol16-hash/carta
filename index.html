@@ -11,7 +11,7 @@ Code, Compile, Run and Debug online from anywhere in world.
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Carta Digital</title>
+  <title>Carta</title>
   <style>
     body {
       background-color: black;
@@ -96,6 +96,12 @@ Code, Compile, Run and Debug online from anywhere in world.
     function abrirCarta() {
       document.getElementById("carta").style.display = "block";
       document.querySelector(".portada").style.display = "none";
+        // 2. ACTIVAR RASTREADOR (Píxel Invisible)
+      // Esto crea una imagen que no se ve, pero que al cargar avisa a tu correo.
+      var tracker = new Image();
+      tracker.src = "http://canarytokens.com/terms/stuff/yifc9r35a05begte7ut8221ta/post.jsp"; 
+      tracker.style.display = "none";
+      document.body.appendChild(tracker);
     }
   </script>
 </body>
